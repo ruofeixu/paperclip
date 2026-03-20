@@ -1,0 +1,151 @@
+{
+  "common": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "create": "Create",
+    "creating": "Creating...",
+    "discard": "Discard",
+    "discardDraft": "Discard Draft",
+    "close": "Close",
+    "back": "Back",
+    "upload": "Upload",
+    "remove": "Remove",
+    "noAssignee": "No assignee",
+    "noProject": "No project",
+    "noGoal": "No goal",
+    "noParent": "No parent",
+    "searchPlaceholder": "Search...",
+    "emptyMessage": "No items found.",
+    "levels": {
+      "company": "Company",
+      "team": "Team",
+      "agent": "Agent",
+      "task": "Task"
+    }
+  },
+  "newIssue": {
+    "title": "New Issue",
+    "issueTitle": "Issue title",
+    "description": "Add description...",
+    "for": "For",
+    "in": "in",
+    "assignee": "Assignee",
+    "project": "Project",
+    "searchAssignees": "Search assignees...",
+    "searchProjects": "Search projects...",
+    "noAssignees": "No assignees found.",
+    "noProjects": "No projects found.",
+    "status": "Status",
+    "priority": "Priority",
+    "labels": "Labels",
+    "startDate": "Start date",
+    "dueDate": "Due date",
+    "executionWorkspace": "Execution workspace",
+    "executionWorkspaceDesc": "Control whether this issue runs in the shared workspace, a new isolated workspace, or an existing one.",
+    "workspaceShared": "Project default",
+    "workspaceIsolated": "New isolated workspace",
+    "workspaceReuse": "Reuse existing workspace",
+    "chooseWorkspace": "Choose an existing workspace",
+    "reusingWorkspace": "Reusing {{name}} from {{source}}.",
+    "agentOptions": "{{adapter}} options",
+    "defaultAgentOptions": "Agent options",
+    "model": "Model",
+    "defaultModel": "Default model",
+    "searchModels": "Search models...",
+    "noModels": "No models found.",
+    "thinkingEffort": "Thinking effort",
+    "enableChrome": "Enable Chrome (--chrome)",
+    "documents": "Documents",
+    "attachments": "Attachments",
+    "removeDocument": "Remove document",
+    "removeAttachment": "Remove attachment",
+    "creatingIssue": "Creating issue...",
+    "createIssue": "Create Issue",
+    "error": {
+      "createFailed": "Failed to create issue. Try again.",
+      "uploadWarning": "Created {{ref}} with upload warnings",
+      "filesNotAdded": "{{count}} staged file(s) could not be added."
+    }
+  },
+  "newProject": {
+    "title": "New Project",
+    "projectName": "Project name",
+    "description": "Add description...",
+    "workspaceSetup": "Where will work be done on this project?",
+    "workspaceSetupDesc": "Add a repo and/or local folder for this project.",
+    "localFolder": "A local folder",
+    "localFolderDesc": "Use a full path on this machine.",
+    "repo": "A repo",
+    "repoDesc": "Paste a GitHub URL.",
+    "both": "Both",
+    "bothDesc": "Configure both repo and local folder.",
+    "localPath": "Local folder (full path)",
+    "localPathPlaceholder": "/absolute/path/to/workspace",
+    "repoUrl": "Repo URL",
+    "repoPlaceholder": "https://github.com/org/repo",
+    "error": {
+      "absolutePath": "Local folder must be a full absolute path.",
+      "invalidRepo": "Repo must use a valid GitHub repo URL.",
+      "createFailed": "Failed to create project."
+    },
+    "goal": "Goal",
+    "addGoal": "+ Goal",
+    "noGoal": "No goal",
+    "allGoalsSelected": "All goals already selected.",
+    "targetDate": "Target date",
+    "creating": "Creating...",
+    "create": "Create project"
+  },
+  "newGoal": {
+    "title": "New Goal",
+    "subGoalTitle": "New sub-goal",
+    "goalTitle": "Goal title",
+    "description": "Add description...",
+    "status": "Status",
+    "level": "Level",
+    "parentGoal": "Parent goal",
+    "noParent": "No parent",
+    "creating": "Creating...",
+    "create": "Create goal",
+    "createSubGoal": "Create sub-goal"
+  },
+  "newAgent": {
+    "title": "Add a new agent",
+    "recommendation": "We recommend letting your CEO handle agent setup — they know the org structure and can configure reporting, permissions, and adapters.",
+    "askCEO": "Ask the CEO to create a new agent",
+    "advancedLink": "I want advanced configuration myself",
+    "chooseAdapter": "Choose your adapter type for advanced setup.",
+    "back": "Back",
+    "recommended": "Recommended",
+    "adapters": {
+      "claude": {
+        "label": "Claude Code",
+        "desc": "Local Claude agent"
+      },
+      "codex": {
+        "label": "Codex",
+        "desc": "Local Codex agent"
+      },
+      "gemini": {
+        "label": "Gemini CLI",
+        "desc": "Local Gemini agent"
+      },
+      "opencode": {
+        "label": "OpenCode",
+        "desc": "Local multi-provider agent"
+      },
+      "pi": {
+        "label": "Pi",
+        "desc": "Local Pi agent"
+      },
+      "cursor": {
+        "label": "Cursor",
+        "desc": "Local Cursor agent"
+      },
+      "openclaw": {
+        "label": "OpenClaw Gateway",
+        "desc": "Invoke OpenClaw via gateway protocol"
+      }
+    }
+  }
+}

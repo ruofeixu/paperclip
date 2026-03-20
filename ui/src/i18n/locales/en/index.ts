@@ -11,6 +11,7 @@ import auth from './auth.json';
 import activity from './activity.json';
 import approvals from './approvals.json';
 import inbox from './inbox.json';
+import dialogs from './dialogs.json';
 
 export default {
   common,
@@ -26,4 +27,5 @@ export default {
   activity,
   approvals,
   inbox,
+  dialogs,
 };

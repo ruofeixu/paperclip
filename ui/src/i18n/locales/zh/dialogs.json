@@ -1,0 +1,151 @@
+{
+  "common": {
+    "cancel": "取消",
+    "save": "保存",
+    "create": "创建",
+    "creating": "创建中...",
+    "discard": "放弃",
+    "discardDraft": "放弃草稿",
+    "close": "关闭",
+    "back": "返回",
+    "upload": "上传",
+    "remove": "移除",
+    "noAssignee": "无负责人",
+    "noProject": "无项目",
+    "noGoal": "无目标",
+    "noParent": "无父级",
+    "searchPlaceholder": "搜索...",
+    "emptyMessage": "未找到项目。",
+    "levels": {
+      "company": "公司",
+      "team": "团队",
+      "agent": "Agent",
+      "task": "任务"
+    }
+  },
+  "newIssue": {
+    "title": "新建 Issue",
+    "issueTitle": "Issue 标题",
+    "description": "添加描述...",
+    "for": "分配给",
+    "in": "在",
+    "assignee": "负责人",
+    "project": "项目",
+    "searchAssignees": "搜索负责人...",
+    "searchProjects": "搜索项目...",
+    "noAssignees": "未找到负责人。",
+    "noProjects": "未找到项目。",
+    "status": "状态",
+    "priority": "优先级",
+    "labels": "标签",
+    "startDate": "开始日期",
+    "dueDate": "截止日期",
+    "executionWorkspace": "执行工作区",
+    "executionWorkspaceDesc": "控制此 Issue 在共享工作区、新隔离工作区还是现有工作区中运行。",
+    "workspaceShared": "项目默认",
+    "workspaceIsolated": "新建隔离工作区",
+    "workspaceReuse": "重用现有工作区",
+    "chooseWorkspace": "选择现有工作区",
+    "reusingWorkspace": "重用 {{name}} 来自 {{source}}。",
+    "agentOptions": "{{adapter}} 选项",
+    "defaultAgentOptions": "Agent 选项",
+    "model": "模型",
+    "defaultModel": "默认模型",
+    "searchModels": "搜索模型...",
+    "noModels": "未找到模型。",
+    "thinkingEffort": "思考深度",
+    "enableChrome": "启用 Chrome (--chrome)",
+    "documents": "文档",
+    "attachments": "附件",
+    "removeDocument": "移除文档",
+    "removeAttachment": "移除附件",
+    "creatingIssue": "创建 Issue 中...",
+    "createIssue": "创建 Issue",
+    "error": {
+      "createFailed": "创建 Issue 失败，请重试。",
+      "uploadWarning": "已创建 {{ref}} 但有上传警告",
+      "filesNotAdded": "{{count}} 个暂存文件无法添加。"
+    }
+  },
+  "newProject": {
+    "title": "新建项目",
+    "projectName": "项目名称",
+    "description": "添加描述...",
+    "workspaceSetup": "此项目的工作将在哪里进行？",
+    "workspaceSetupDesc": "为此项目添加仓库和/或本地文件夹。",
+    "localFolder": "本地文件夹",
+    "localFolderDesc": "使用此机器上的完整路径。",
+    "repo": "仓库",
+    "repoDesc": "粘贴 GitHub URL。",
+    "both": "两者",
+    "bothDesc": "同时配置仓库和本地文件夹。",
+    "localPath": "本地文件夹（完整路径）",
+    "localPathPlaceholder": "/绝对/路径/到/工作区",
+    "repoUrl": "仓库 URL",
+    "repoPlaceholder": "https://github.com/组织/仓库",
+    "error": {
+      "absolutePath": "本地文件夹必须是完整绝对路径。",
+      "invalidRepo": "仓库必须使用有效的 GitHub URL。",
+      "createFailed": "创建项目失败。"
+    },
+    "goal": "目标",
+    "addGoal": "+ 目标",
+    "noGoal": "无目标",
+    "allGoalsSelected": "已选择所有目标。",
+    "targetDate": "目标日期",
+    "creating": "创建中...",
+    "create": "创建项目"
+  },
+  "newGoal": {
+    "title": "新建目标",
+    "subGoalTitle": "新建子目标",
+    "goalTitle": "目标标题",
+    "description": "添加描述...",
+    "status": "状态",
+    "level": "层级",
+    "parentGoal": "父级目标",
+    "noParent": "无父级",
+    "creating": "创建中...",
+    "create": "创建目标",
+    "createSubGoal": "创建子目标"
+  },
+  "newAgent": {
+    "title": "添加新 Agent",
+    "recommendation": "我们建议让您的 CEO 处理 Agent 设置 — 他们了解组织结构，可以配置报告、权限和适配器。",
+    "askCEO": "请 CEO 创建新 Agent",
+    "advancedLink": "我想自己进行高级配置",
+    "chooseAdapter": "选择适配器类型进行高级设置。",
+    "back": "返回",
+    "recommended": "推荐",
+    "adapters": {
+      "claude": {
+        "label": "Claude Code",
+        "desc": "本地 Claude Agent"
+      },
+      "codex": {
+        "label": "Codex",
+        "desc": "本地 Codex Agent"
+      },
+      "gemini": {
+        "label": "Gemini CLI",
+        "desc": "本地 Gemini Agent"
+      },
+      "opencode": {
+        "label": "OpenCode",
+        "desc": "本地多提供商 Agent"
+      },
+      "pi": {
+        "label": "Pi",
+        "desc": "本地 Pi Agent"
+      },
+      "cursor": {
+        "label": "Cursor",
+        "desc": "本地 Cursor Agent"
+      },
+      "openclaw": {
+        "label": "OpenClaw Gateway",
+        "desc": "通过网关协议调用 OpenClaw"
+      }
+    }
+  }
+}
