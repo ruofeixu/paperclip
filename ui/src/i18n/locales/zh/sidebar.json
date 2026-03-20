@@ -1,0 +1,20 @@
+{
+  "newIssue": "新建 Issue",
+  "dashboard": "仪表盘",
+  "inbox": "收件箱",
+  "work": "工作",
+  "issues": "Issues",
+  "goals": "目标",
+  "projects": "项目",
+  "agents": "Agent",
+  "company": "公司",
+  "org": "组织",
+  "costs": "成本",
+  "activity": "活动",
+  "settings": "设置",
+  "archivedProjects": "已归档项目",
+  "noProjects": "暂无项目",
+  "noAgents": "暂无 Agent",
+  "noCompany": "选择公司",
+  "search": "搜索"
+}

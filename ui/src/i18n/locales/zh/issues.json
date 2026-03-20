@@ -1,0 +1,32 @@
+{
+  "title": "Issues",
+  "newIssue": "新建 Issue",
+  "search": "搜索 issues...",
+  "filters": "筛选",
+  "assignee": "负责人",
+  "project": "项目",
+  "priority": "优先级",
+  "status": "状态",
+  "empty": {
+    "title": "暂无 Issue",
+    "description": "创建第一个 Issue 来跟踪任务。"
+  },
+  "create": {
+    "title": "创建 Issue",
+    "titlePlaceholder": "Issue 标题",
+    "descriptionPlaceholder": "描述（可选）",
+    "priority": "优先级",
+    "assignee": "负责人",
+    "project": "项目"
+  },
+  "detail": {
+    "title": "Issue 详情",
+    "comments": "评论",
+    "activity": "活动",
+    "relatedRuns": "相关运行",
+    "checkout": "检出",
+    "reassign": "重新分配",
+    "close": "关闭",
+    "reopen": "重新打开"
+  }
+}

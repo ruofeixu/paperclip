@@ -1,0 +1,17 @@
+{
+  "title": "成本",
+  "budgets": "预算",
+  "monthSpend": "本月支出",
+  "totalSpend": "总支出",
+  "budgetStatus": {
+    "healthy": "健康",
+    "atRisk": "有风险",
+    "exceeded": "已超支"
+  },
+  "actions": {
+    "setBudget": "设置预算",
+    "editBudget": "编辑预算",
+    "pauseProject": "暂停项目",
+    "resumeProject": "恢复项目"
+  }
+}

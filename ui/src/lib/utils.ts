@@ -11,8 +11,18 @@ export function formatCents(cents: number): string {
   return `$${(cents / 100).toFixed(2)}`;
 }
 
+// Get current language from i18n or fallback to browser language
+function getCurrentLocale(): string {
+  if (typeof window !== "undefined") {
+    // Try to get from localStorage where i18next stores the language
+    const storedLang = window.localStorage.getItem("i18nextLng");
+    if (storedLang) return storedLang;
+  }
+  return navigator.language || "en-US";
+}
+
 export function formatDate(date: Date | string): string {
-  return new Date(date).toLocaleDateString("en-US", {
+  return new Date(date).toLocaleDateString(getCurrentLocale(), {
     month: "short",
     day: "numeric",
     year: "numeric",
@@ -20,7 +30,7 @@ export function formatDate(date: Date | string): string {
 }
 
 export function formatDateTime(date: Date | string): string {
-  return new Date(date).toLocaleString("en-US", {
+  return new Date(date).toLocaleString(getCurrentLocale(), {
     month: "short",
     day: "numeric",
     year: "numeric",

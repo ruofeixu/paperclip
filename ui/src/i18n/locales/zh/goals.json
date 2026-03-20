@@ -1,0 +1,19 @@
+{
+  "title": "目标",
+  "newGoal": "新建目标",
+  "empty": {
+    "title": "暂无目标",
+    "description": "创建第一个目标来跟踪目标进度。"
+  },
+  "status": {
+    "active": "活跃",
+    "completed": "已完成",
+    "archived": "已归档"
+  },
+  "detail": {
+    "title": "目标详情",
+    "issues": "Issues",
+    "progress": "进度",
+    "targetDate": "目标日期"
+  }
+}

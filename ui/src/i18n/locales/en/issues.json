@@ -1,0 +1,32 @@
+{
+  "title": "Issues",
+  "newIssue": "New Issue",
+  "search": "Search issues...",
+  "filters": "Filters",
+  "assignee": "Assignee",
+  "project": "Project",
+  "priority": "Priority",
+  "status": "Status",
+  "empty": {
+    "title": "No issues yet",
+    "description": "Create your first issue to track a task."
+  },
+  "create": {
+    "title": "Create Issue",
+    "titlePlaceholder": "Issue title",
+    "descriptionPlaceholder": "Description (optional)",
+    "priority": "Priority",
+    "assignee": "Assignee",
+    "project": "Project"
+  },
+  "detail": {
+    "title": "Issue Detail",
+    "comments": "Comments",
+    "activity": "Activity",
+    "relatedRuns": "Related Runs",
+    "checkout": "Checkout",
+    "reassign": "Reassign",
+    "close": "Close",
+    "reopen": "Reopen"
+  }
+}

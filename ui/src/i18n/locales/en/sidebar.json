@@ -1,0 +1,20 @@
+{
+  "newIssue": "New Issue",
+  "dashboard": "Dashboard",
+  "inbox": "Inbox",
+  "work": "Work",
+  "issues": "Issues",
+  "goals": "Goals",
+  "projects": "Projects",
+  "agents": "Agents",
+  "company": "Company",
+  "org": "Org",
+  "costs": "Costs",
+  "activity": "Activity",
+  "settings": "Settings",
+  "archivedProjects": "Archived Projects",
+  "noProjects": "No projects",
+  "noAgents": "No agents",
+  "noCompany": "Select company",
+  "search": "Search"
+}

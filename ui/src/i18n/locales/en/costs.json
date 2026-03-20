@@ -1,0 +1,17 @@
+{
+  "title": "Costs",
+  "budgets": "Budgets",
+  "monthSpend": "Month Spend",
+  "totalSpend": "Total Spend",
+  "budgetStatus": {
+    "healthy": "Healthy",
+"atRisk": "At Risk",
+    "exceeded": "Exceeded"
+  },
+  "actions": {
+    "setBudget": "Set Budget",
+    "editBudget": "Edit Budget",
+    "pauseProject": "Pause Project",
+    "resumeProject": "Resume Project"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Agents",
+  "all": "All",
+  "active": "Active",
+  "paused": "Paused",
+  "error": "Error",
+  "listView": "List",
+  "orgView": "Org",
+  "showTerminated": "Show terminated",
+  "filters": "Filters",
+  "empty": {
+    "title": "No agents yet",
+    "description": "Create your first agent to start automating tasks."
+  },
+  "create": "Create Agent",
+  "status": {
+    "active": "Active",
+    "running": "Running",
+    "idle": "Idle",
+    "paused": "Paused",
+    "error": "Error",
+    "terminated": "Terminated"
+  },
+  "role": {
+    "executor": "Executor",
+    "planner": "Planner",
+    "reviewer": "Reviewer"
+  },
+  "details": {
+    "title": "Agent Details",
+    "tasks": "Tasks",
+    "runs": "Runs",
+    "settings": "Settings",
+    "overview": "Overview",
+    "activity": "Activity"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "welcome": {
+    "title": "欢迎使用 Paperclip",
+    "subtitle": "设置您的第一个公司和 Agent 开始使用。",
+    "action": "开始使用"
+  },
+  "empty": {
+    "selectCompany": "创建或选择公司以查看仪表盘。"
+  },
+  "noAgents": {
+    "message": "您还没有创建 Agent。",
+    "action": "立即创建"
+  },
+  "budgetIncidents": {
+    "title_one": "{{count}} 个活跃的预算异常",
+    "title_other": "{{count}} 个活跃的预算异常",
+    "subtitle": "{{agents}} 个 Agent 已暂停 · {{projects}} 个项目已暂停 · {{approvals}} 个待审批预算"
+  },
+  "metrics": {
+    "agentsEnabled": "已启用 Agent",
+    "agentsEnabledDesc": "{{running}} 运行中, {{paused}} 已暂停, {{errors}} 错误",
+    "tasksInProgress": "进行中任务",
+    "tasksInProgressDesc": "{{open}} 打开, {{blocked}} 阻塞",
+    "monthSpend": "本月支出",
+    "monthSpendDesc": "预算使用率 {{percent}}% ({{budget}})",
+    "monthSpendDescUnlimited": "无限制预算",
+    "pendingApprovals": "待审批",
+    "pendingApprovalsDesc": "等待董事会审核",
+    "pendingApprovalsDescBudget": "{{count}} 个预算覆盖等待董事会审核"
+  },
+  "charts": {
+    "runActivity": "运行活动",
+    "runActivitySubtitle": "最近 14 天",
+    "issuesByPriority": "Issue 优先级分布",
+    "issuesByPrioritySubtitle": "最近 14 天",
+    "issuesByStatus": "Issue 状态分布",
+    "issuesByStatusSubtitle": "最近 14 天",
+    "successRate": "成功率",
+    "successRateSubtitle": "最近 14 天"
+  },
+  "recentActivity": {
+    "title": "最近活动"
+  },
+  "recentTasks": {
+    "title": "最近任务",
+    "empty": "暂无任务。"
+  },
+  "openBudgets": "打开预算"
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Goals",
+  "newGoal": "New Goal",
+  "empty": {
+    "title": "No goals yet",
+    "description": "Create your first goal to track objectives."
+  },
+  "status": {
+    "active": "Active",
+    "completed": "Completed",
+    "archived": "Archived"
+  },
+  "detail": {
+    "title": "Goal Detail",
+    "issues": "Issues",
+    "progress": "Progress",
+    "targetDate": "Target Date"
+  }
+}

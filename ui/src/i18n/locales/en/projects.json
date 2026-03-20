@@ -1,0 +1,16 @@
+{
+  "title": "Projects",
+  "newProject": "New Project",
+  "empty": {
+    "title": "No projects yet",
+    "description": "Create your first project to organize issues."
+  },
+  "detail": {
+    "overview": "Overview",
+    "issues": "Issues",
+    "settings": "Settings",
+    "archive": "Archive Project",
+    "unarchive": "Unarchive Project",
+    "archivedNotice": "This project is archived."
+  }
+}

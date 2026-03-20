@@ -1,0 +1,17 @@
+{
+  "title": "Settings",
+  "company": {
+    "title": "Company Settings",
+    "name": "Company Name",
+    "brandColor": "Brand Color",
+    "issuePrefix": "Issue Prefix"
+  },
+  "instance": {
+    "title": "Instance Settings",
+    "general": "General",
+    "experimental": "Experimental"
+  },
+  "integrations": "Integrations",
+  "apiKeys": "API Keys",
+  "webhooks": "Webhooks"
+}
