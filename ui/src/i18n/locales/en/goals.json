@@ -1,6 +1,9 @@
 {
   "title": "Goals",
   "newGoal": "New Goal",
+  "add": "Add Goal",
+  "noCompany": "Select a company to view goals.",
+  "noGoals": "No goals yet.",
   "empty": {
     "title": "No goals yet",
     "description": "Create your first goal to track objectives."

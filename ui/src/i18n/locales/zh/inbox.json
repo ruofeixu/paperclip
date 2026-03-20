@@ -1,4 +1,74 @@
 {
   "title": "收件箱",
-  "empty": "收件箱为空。"
+  "noCompany": "选择公司以查看收件箱。",
+  "tabs": {
+    "recent": "最近",
+    "unread": "未读",
+    "all": "全部"
+  },
+  "actions": {
+    "markAllRead": "全部标记为已读",
+    "marking": "标记中…",
+    "retry": "重试",
+    "retrying": "重试中…",
+    "openRun": "打开运行",
+    "approve": "批准",
+    "reject": "拒绝",
+    "dismiss": "忽略"
+  },
+  "filter": {
+    "category": "分类",
+    "approvalStatus": "审批状态",
+    "everything": "所有分类",
+    "myIssues": "我最近的问题",
+    "joinRequests": "加入请求",
+    "approvals": "审批",
+    "failedRuns": "失败的运行",
+    "alerts": "提醒",
+    "allStatuses": "所有审批状态",
+    "actionable": "需要操作",
+    "resolved": "已解决"
+  },
+  "sections": {
+    "joinRequests": "加入请求",
+    "failedRuns": "失败的运行",
+    "alerts": "提醒"
+  },
+  "run": {
+    "scheduled": "定时",
+    "assignment": "分配",
+    "manual": "手动",
+    "automation": "自动化",
+    "noLinkedIssue": "无关联问题",
+    "errorCode": "错误代码: {{code}}",
+    "runFailed": "{{source}} 运行失败 {{time}}",
+    "runLabel": "运行 {{id}}",
+    "retryFailed": "重试运行失败"
+  },
+  "approval": {
+    "requestedBy": "由 {{name}} 请求",
+    "updated": "更新于 {{time}}"
+  },
+  "joinRequest": {
+    "human": "人工加入请求",
+    "agent": "Agent 加入请求",
+    "agentNamed": "Agent 加入请求: {{name}}",
+    "requested": "于 {{time}} 从 IP {{ip}} 请求",
+    "email": "邮箱: {{email}}",
+    "adapter": "适配器: {{type}}"
+  },
+  "alert": {
+    "agentErrors": "{{count}} 个 Agent 有错误",
+    "budget": "本月预算使用率 {{percent}}%"
+  },
+  "error": {
+    "approveFailed": "批准失败",
+    "rejectFailed": "拒绝失败",
+    "approveJoinFailed": "批准加入请求失败",
+    "rejectJoinFailed": "拒绝加入请求失败"
+  },
+  "empty": "收件箱为空。",
+  "emptyUnread": "没有新收件箱项目。",
+  "emptyRecent": "没有最近的收件箱项目。",
+  "emptyFiltered": "没有匹配这些筛选条件的收件箱项目。"
 }

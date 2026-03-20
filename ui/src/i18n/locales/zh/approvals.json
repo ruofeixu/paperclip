@@ -1,7 +1,14 @@
 {
   "title": "审批",
+  "noCompany": "请先选择公司。",
   "pending": "待处理",
+  "all": "全部",
   "approved": "已批准",
   "rejected": "已拒绝",
-  "empty": "暂无待审批项目。"
+  "empty": "暂无待审批项目。",
+  "emptyAll": "暂无审批项目。",
+  "error": {
+    "approveFailed": "批准失败",
+    "rejectFailed": "拒绝失败"
+  }
 }

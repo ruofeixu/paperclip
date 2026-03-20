@@ -1,5 +1,6 @@
 {
   "title": "Settings",
+  "noCompany": "No company selected. Select a company from the switcher above.",
   "company": {
     "title": "Company Settings",
     "name": "Company Name",

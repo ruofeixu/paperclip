@@ -1,4 +1,9 @@
 {
   "title": "活动",
-  "empty": "暂无活动。"
+  "noCompany": "选择公司以查看活动。",
+  "empty": "暂无活动。",
+  "filter": {
+    "placeholder": "按类型筛选",
+    "all": "所有类型"
+  }
 }

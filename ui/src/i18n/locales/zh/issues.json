@@ -7,6 +7,7 @@
   "project": "项目",
   "priority": "优先级",
   "status": "状态",
+  "noCompany": "选择公司以查看 Issues。",
   "empty": {
     "title": "暂无 Issue",
     "description": "创建第一个 Issue 来跟踪任务。"

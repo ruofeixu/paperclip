@@ -1,6 +1,9 @@
 {
   "title": "项目",
   "newProject": "新建项目",
+  "add": "添加项目",
+  "noCompany": "选择公司以查看项目。",
+  "noProjects": "暂无项目。",
   "empty": {
     "title": "暂无项目",
     "description": "创建第一个项目来组织 Issues。"

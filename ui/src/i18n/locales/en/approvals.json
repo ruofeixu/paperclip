@@ -1,7 +1,14 @@
 {
   "title": "Approvals",
+  "noCompany": "Select a company first.",
   "pending": "Pending",
+  "all": "All",
   "approved": "Approved",
   "rejected": "Rejected",
-  "empty": "No pending approvals."
+  "empty": "No pending approvals.",
+  "emptyAll": "No approvals yet.",
+  "error": {
+    "approveFailed": "Failed to approve",
+    "rejectFailed": "Failed to reject"
+  }
 }

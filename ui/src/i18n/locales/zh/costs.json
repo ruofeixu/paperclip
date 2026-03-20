@@ -1,6 +1,106 @@
 {
   "title": "成本",
-  "budgets": "预算",
+  "noCompany": "选择公司以查看成本。",
+  "tabs": {
+    "overview": "概览",
+    "budgets": "预算",
+    "providers": "提供商",
+    "billers": "计费方",
+    "finance": "财务"
+  },
+  "dateRange": {
+    "to": "至",
+    "customPrompt": "选择开始和结束日期以加载数据。"
+  },
+  "header": {
+    "title": "成本",
+    "description": "推理支出、平台费用、积分和实时配额窗口。"
+  },
+  "metrics": {
+    "inferenceSpend": "推理支出",
+    "inferenceSpendSubtitle": "{{tokens}} 个 Token 跨请求范围事件",
+    "budget": "预算",
+    "budgetOpen": "开放",
+    "budgetNoCap": "未配置月度上限",
+    "budgetPaused": "{{agents}} 个 Agent 已暂停 · {{projects}} 个项目已暂停",
+    "budgetUsed": "{{spent}} / {{total}}",
+    "financeNet": "财务净额",
+    "financeNetSubtitle": "{{debits}} 借项 · {{credits}} 贷项",
+    "financeEvents": "财务事件",
+    "financeEventsSubtitle": "{{estimated}} 范围内预估",
+    "activeIncidents": "活跃事件",
+    "activeIncidentsSubtitle": "开放的软阈值或硬阈值越界",
+    "pendingApprovals": "待审批",
+    "pendingApprovalsSubtitle": "预算覆盖审批等待董事会操作",
+    "pausedAgents": "已暂停 Agent",
+    "pausedAgentsSubtitle": "Agent 心跳被预算阻止",
+    "pausedProjects": "已暂停项目",
+    "pausedProjectsSubtitle": "项目执行被预算阻止"
+  },
+  "inferenceLedger": {
+    "title": "推理账本",
+    "description": "所选期间的请求范围推理支出。",
+    "usage": "使用量",
+    "unlimitedBudget": "无限制预算",
+    "budgetLabel": "预算 {{amount}}",
+    "utilization": "此范围消耗了 {{percent}}% 的月度预算。"
+  },
+  "byAgent": {
+    "title": "按 Agent",
+    "description": "每个 Agent 在所选期间的消耗。",
+    "empty": "暂无成本事件。",
+    "in": "输入",
+    "out": "输出",
+    "apiRuns": "{{count}} 个 API",
+    "subscriptionRuns": "{{count}} 个订阅"
+  },
+  "byProject": {
+    "title": "按项目",
+    "description": "通过项目关联 Issue 归因的运行成本。",
+    "empty": "暂无项目归因的运行成本。",
+    "unattributed": "未归因"
+  },
+  "financeLedger": {
+    "title": "财务账本",
+    "description": "不映射到单个推理请求的账户级费用。",
+    "debits": "借项",
+    "debitsSubtitle": "范围内 {{count}} 个总事件",
+    "debitsSubtitle_plural": "范围内 {{count}} 个总事件",
+    "credits": "贷项",
+    "creditsSubtitle": "退款、抵销和积分返还",
+    "net": "净额",
+    "netSubtitle": "所选期间的借项减去贷项",
+    "estimated": "预估",
+    "estimatedSubtitle": "尚未获得发票授权的预估借项"
+  },
+  "budgetControl": {
+    "title": "预算控制平面",
+    "description": "Agent 和项目的硬停止支出限制。提供商订阅配额保持独立，显示在提供商下。",
+    "activeIncidentsTitle": "活跃事件",
+    "activeIncidentsDescription": "在此处通过提高预算或明确保持范围暂停来解决硬停止。",
+    "noPolicies": "暂无预算策略。从详细页面设置 Agent 和项目预算，或使用现有的公司月度预算控制。",
+    "companyBudgets": "公司预算",
+    "companyBudgetsDescription": "公司范围月度策略。",
+    "agentBudgets": "Agent 预算",
+    "agentBudgetsDescription": "单个 Agent 的循环月度支出策略。",
+    "projectBudgets": "项目预算",
+    "projectBudgetsDescription": "执行绑定项目的生命周期支出策略。"
+  },
+  "providers": {
+    "all": "所有提供商",
+    "empty": "此期间无成本事件。"
+  },
+  "billers": {
+    "all": "所有计费方",
+    "empty": "此期间无可计费事件。"
+  },
+  "finance": {
+    "byBiller": "按计费方",
+    "byBillerDescription": "按收费或积分方分组的账户级财务事件。",
+    "empty": "暂无财务事件。",
+    "timelineEmpty": "暂无财务事件。计费方发票或积分到账后添加账户级费用。"
+  },
+  "budgetsTab": "预算",
   "monthSpend": "本月支出",
   "totalSpend": "总支出",
   "budgetStatus": {

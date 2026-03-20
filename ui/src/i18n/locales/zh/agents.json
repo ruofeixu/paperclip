@@ -10,9 +10,15 @@
   "filters": "筛选",
   "empty": {
     "title": "暂无 Agent",
-    "description": "创建第一个 Agent 开始自动化任务。"
+    "description": "创建第一个 Agent 开始使用。",
+    "action": "新建 Agent"
   },
-  "create": "创建 Agent",
+  "noCompany": "选择公司以查看 Agents。",
+  "create": "新建 Agent",
+  "agentCount": "{{count}} 个 Agent",
+  "agentCount_plural": "{{count}} 个 Agent",
+  "noMatch": "没有匹配筛选条件的 Agent。",
+  "noOrgHierarchy": "未定义组织架构。",
   "status": {
     "active": "活跃",
     "running": "运行中",
@@ -26,6 +32,18 @@
     "planner": "规划者",
     "reviewer": "审核者"
   },
+  "adapter": {
+    "claude_local": "Claude",
+    "codex_local": "Codex",
+    "gemini_local": "Gemini",
+    "opencode_local": "OpenCode",
+    "cursor": "Cursor",
+    "openclaw_gateway": "OpenClaw Gateway",
+    "process": "Process",
+    "http": "HTTP"
+  },
+  "live": "运行中",
+  "liveCount": "运行中 ({{count}})",
   "details": {
     "title": "Agent 详情",
     "tasks": "任务",

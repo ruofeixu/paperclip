@@ -7,6 +7,7 @@
   "project": "Project",
   "priority": "Priority",
   "status": "Status",
+  "noCompany": "Select a company to view issues.",
   "empty": {
     "title": "No issues yet",
     "description": "Create your first issue to track a task."

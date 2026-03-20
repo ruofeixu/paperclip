@@ -1,4 +1,74 @@
 {
   "title": "Inbox",
-  "empty": "Inbox is empty."
+  "noCompany": "Select a company to view inbox.",
+  "tabs": {
+    "recent": "Recent",
+    "unread": "Unread",
+    "all": "All"
+  },
+  "actions": {
+    "markAllRead": "Mark all as read",
+    "marking": "Marking…",
+    "retry": "Retry",
+    "retrying": "Retrying…",
+    "openRun": "Open run",
+    "approve": "Approve",
+    "reject": "Reject",
+    "dismiss": "Dismiss"
+  },
+  "filter": {
+    "category": "Category",
+    "approvalStatus": "Approval status",
+    "everything": "All categories",
+    "myIssues": "My recent issues",
+    "joinRequests": "Join requests",
+    "approvals": "Approvals",
+    "failedRuns": "Failed runs",
+    "alerts": "Alerts",
+    "allStatuses": "All approval statuses",
+    "actionable": "Needs action",
+    "resolved": "Resolved"
+  },
+  "sections": {
+    "joinRequests": "Join Requests",
+    "failedRuns": "Failed Runs",
+    "alerts": "Alerts"
+  },
+  "run": {
+    "scheduled": "Scheduled",
+    "assignment": "Assignment",
+    "manual": "Manual",
+    "automation": "Automation",
+    "noLinkedIssue": "No linked issue",
+    "errorCode": "Error code: {{code}}",
+    "runFailed": "{{source}} run failed {{time}}",
+    "runLabel": "run {{id}}",
+    "retryFailed": "Failed to retry run"
+  },
+  "approval": {
+    "requestedBy": "requested by {{name}}",
+    "updated": "updated {{time}}"
+  },
+  "joinRequest": {
+    "human": "Human join request",
+    "agent": "Agent join request",
+    "agentNamed": "Agent join request: {{name}}",
+    "requested": "requested {{time}} from IP {{ip}}",
+    "email": "email: {{email}}",
+    "adapter": "adapter: {{type}}"
+  },
+  "alert": {
+    "agentErrors": "{{count}} {{count, plural, one {agent has} other {agents have}}} errors",
+    "budget": "Budget at {{percent}}% utilization this month"
+  },
+  "error": {
+    "approveFailed": "Failed to approve",
+    "rejectFailed": "Failed to reject",
+    "approveJoinFailed": "Failed to approve join request",
+    "rejectJoinFailed": "Failed to reject join request"
+  },
+  "empty": "Inbox is empty.",
+  "emptyUnread": "No new inbox items.",
+  "emptyRecent": "No recent inbox items.",
+  "emptyFiltered": "No inbox items match these filters."
 }

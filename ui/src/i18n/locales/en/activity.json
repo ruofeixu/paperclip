@@ -1,4 +1,9 @@
 {
   "title": "Activity",
-  "empty": "No activity yet."
+  "noCompany": "Select a company to view activity.",
+  "empty": "No activity yet.",
+  "filter": {
+    "placeholder": "Filter by type",
+    "all": "All types"
+  }
 }

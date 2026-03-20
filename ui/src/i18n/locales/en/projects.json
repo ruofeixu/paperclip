@@ -1,6 +1,9 @@
 {
   "title": "Projects",
   "newProject": "New Project",
+  "add": "Add Project",
+  "noCompany": "Select a company to view projects.",
+  "noProjects": "No projects yet.",
   "empty": {
     "title": "No projects yet",
     "description": "Create your first project to organize issues."

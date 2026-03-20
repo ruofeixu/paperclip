@@ -10,9 +10,15 @@
   "filters": "Filters",
   "empty": {
     "title": "No agents yet",
-    "description": "Create your first agent to start automating tasks."
+    "description": "Create your first agent to get started.",
+    "action": "New Agent"
   },
-  "create": "Create Agent",
+  "noCompany": "Select a company to view agents.",
+  "create": "New Agent",
+  "agentCount": "{{count}} agent",
+  "agentCount_plural": "{{count}} agents",
+  "noMatch": "No agents match the selected filter.",
+  "noOrgHierarchy": "No organizational hierarchy defined.",
   "status": {
     "active": "Active",
     "running": "Running",
@@ -26,6 +32,18 @@
     "planner": "Planner",
     "reviewer": "Reviewer"
   },
+  "adapter": {
+    "claude_local": "Claude",
+    "codex_local": "Codex",
+    "gemini_local": "Gemini",
+    "opencode_local": "OpenCode",
+    "cursor": "Cursor",
+    "openclaw_gateway": "OpenClaw Gateway",
+    "process": "Process",
+    "http": "HTTP"
+  },
+  "live": "Live",
+  "liveCount": "Live ({{count}})",
   "details": {
     "title": "Agent Details",
     "tasks": "Tasks",
