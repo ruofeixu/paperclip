@@ -1,8 +1,10 @@
 import type {
   InstanceExperimentalSettings,
   InstanceGeneralSettings,
+  InstanceNotificationSettings,
   PatchInstanceGeneralSettings,
   PatchInstanceExperimentalSettings,
+  PatchInstanceNotificationSettings,
 } from "@paperclipai/shared";
 import { api } from "./client";
 
@@ -15,4 +17,8 @@ export const instanceSettingsApi = {
     api.get<InstanceExperimentalSettings>("/instance/settings/experimental"),
   updateExperimental: (patch: PatchInstanceExperimentalSettings) =>
     api.patch<InstanceExperimentalSettings>("/instance/settings/experimental", patch),
+  getNotifications: () =>
+    api.get<InstanceNotificationSettings>("/instance/settings/notifications"),
+  updateNotifications: (patch: PatchInstanceNotificationSettings) =>
+    api.patch<InstanceNotificationSettings>("/instance/settings/notifications", patch),
 };
