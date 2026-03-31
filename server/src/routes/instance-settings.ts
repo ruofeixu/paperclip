@@ -1,6 +1,10 @@
 import { Router, type Request } from "express";
 import type { Db } from "@paperclipai/db";
-import { patchInstanceExperimentalSettingsSchema, patchInstanceGeneralSettingsSchema } from "@paperclipai/shared";
+import {
+  patchInstanceExperimentalSettingsSchema,
+  patchInstanceGeneralSettingsSchema,
+  patchInstanceNotificationSettingsSchema,
+} from "@paperclipai/shared";
 import { forbidden } from "../errors.js";
 import { validate } from "../middleware/validate.js";
 import { instanceSettingsService, logActivity } from "../services/index.js";
@@ -87,6 +91,38 @@ export function instanceSettingsRoutes(db: Db) {
         ),
       );
       res.json(updated.experimental);
+    },
+  );
+
+  router.get("/instance/settings/notifications", async (req, res) => {
+    assertCanManageInstanceSettings(req);
+    res.json(await svc.getNotifications());
+  });
+
+  router.patch(
+    "/instance/settings/notifications",
+    validate(patchInstanceNotificationSettingsSchema),
+    async (req, res) => {
+      assertCanManageInstanceSettings(req);
+      const updated = await svc.updateNotifications(req.body);
+      const actor = getActorInfo(req);
+      const companyIds = await svc.listCompanyIds();
+      await Promise.all(
+        companyIds.map((companyId) =>
+          logActivity(db, {
+            companyId,
+            actorType: actor.actorType,
+            actorId: actor.actorId,
+            agentId: actor.agentId,
+            runId: actor.runId,
+            action: "instance.settings.notifications_updated",
+            entityType: "instance_settings",
+            entityId: updated.id,
+            details: { changedKeys: Object.keys(req.body).sort() },
+          }),
+        ),
+      );
+      res.json(updated.notifications);
     },
   );
 

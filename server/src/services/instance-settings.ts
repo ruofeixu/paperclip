@@ -5,9 +5,12 @@ import {
   type InstanceGeneralSettings,
   instanceExperimentalSettingsSchema,
   type InstanceExperimentalSettings,
+  instanceNotificationSettingsSchema,
+  type InstanceNotificationSettings,
   type PatchInstanceGeneralSettings,
   type InstanceSettings,
   type PatchInstanceExperimentalSettings,
+  type PatchInstanceNotificationSettings,
 } from "@paperclipai/shared";
 import { eq } from "drizzle-orm";
 
@@ -39,11 +42,23 @@ function normalizeExperimentalSettings(raw: unknown): InstanceExperimentalSettin
   };
 }
 
+function normalizeNotificationSettings(raw: unknown): InstanceNotificationSettings {
+  const parsed = instanceNotificationSettingsSchema.safeParse(raw ?? {});
+  if (parsed.success) {
+    return {
+      channels: parsed.data.channels ?? [],
+      notifyOnAgentAuthRequired: parsed.data.notifyOnAgentAuthRequired ?? true,
+    };
+  }
+  return { channels: [], notifyOnAgentAuthRequired: true };
+}
+
 function toInstanceSettings(row: typeof instanceSettings.$inferSelect): InstanceSettings {
   return {
     id: row.id,
     general: normalizeGeneralSettings(row.general),
     experimental: normalizeExperimentalSettings(row.experimental),
+    notifications: normalizeNotificationSettings((row as Record<string, unknown>).notifications),
     createdAt: row.createdAt,
     updatedAt: row.updatedAt,
   };
@@ -121,6 +136,29 @@ export function instanceSettingsService(db: Db) {
         .update(instanceSettings)
         .set({
           experimental: { ...nextExperimental },
+          updatedAt: now,
+        })
+        .where(eq(instanceSettings.id, current.id))
+        .returning();
+      return toInstanceSettings(updated ?? current);
+    },
+
+    getNotifications: async (): Promise<InstanceNotificationSettings> => {
+      const row = await getOrCreateRow();
+      return normalizeNotificationSettings((row as Record<string, unknown>).notifications);
+    },
+
+    updateNotifications: async (patch: PatchInstanceNotificationSettings): Promise<InstanceSettings> => {
+      const current = await getOrCreateRow();
+      const nextNotifications = normalizeNotificationSettings({
+        ...normalizeNotificationSettings((current as Record<string, unknown>).notifications),
+        ...patch,
+      });
+      const now = new Date();
+      const [updated] = await db
+        .update(instanceSettings)
+        .set({
+          notifications: { ...nextNotifications } as unknown as typeof instanceSettings.$inferInsert["notifications"],
           updatedAt: now,
         })
         .where(eq(instanceSettings.id, current.id))

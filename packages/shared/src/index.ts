@@ -332,6 +332,14 @@ export {
   instanceExperimentalSettingsSchema,
   patchInstanceExperimentalSettingsSchema,
   type PatchInstanceExperimentalSettings,
+  instanceNotificationSettingsSchema,
+  patchInstanceNotificationSettingsSchema,
+  type InstanceNotificationSettings,
+  type PatchInstanceNotificationSettings,
+  notificationChannelSchema,
+  wecomBotChannelSchema,
+  type NotificationChannel,
+  type WecomBotChannel,
 } from "./validators/index.js";
 
 export {

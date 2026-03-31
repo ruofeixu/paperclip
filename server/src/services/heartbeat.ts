@@ -30,6 +30,7 @@ import { budgetService, type BudgetEnforcementScope } from "./budgets.js";
 import { secretService } from "./secrets.js";
 import { resolveDefaultAgentWorkspaceDir, resolveManagedProjectWorkspaceDir } from "../home-paths.js";
 import { summarizeHeartbeatRunResultJson } from "./heartbeat-run-summary.js";
+import { sendNotification } from "./notifications.js";
 import {
   buildWorkspaceReadyComment,
   cleanupExecutionWorkspaceArtifacts,
@@ -2827,6 +2828,28 @@ export function heartbeatService(db: Db) {
         }
       }
       await finalizeAgentStatus(agent.id, outcome);
+
+      // If the run failed due to auth expiry, pause the agent and send a notification
+      if (outcome === "failed" && adapterResult.errorCode?.endsWith("_auth_required")) {
+        await db
+          .update(agents)
+          .set({ status: "paused", updatedAt: new Date() })
+          .where(eq(agents.id, agent.id));
+        publishLiveEvent({
+          companyId: agent.companyId,
+          type: "agent.status",
+          payload: { agentId: agent.id, status: "paused", outcome: "auth_required" },
+        });
+        logger.warn({ agentId: agent.id, errorCode: adapterResult.errorCode }, "agent paused: auth required");
+
+        const notifSettings = await instanceSettingsService(db).getNotifications();
+        if (notifSettings.notifyOnAgentAuthRequired && notifSettings.channels.length > 0) {
+          void sendNotification(notifSettings.channels, {
+            title: `⚠️ Agent paused: authentication required`,
+            body: `Agent **${agent.name}** (${agent.id}) was paused because its credentials have expired.\nError: ${adapterResult.errorCode}\n\nPlease re-authenticate and resume the agent.`,
+          });
+        }
+      }
     } catch (err) {
       const message = redactCurrentUserText(
         err instanceof Error ? err.message : "Unknown adapter failure",

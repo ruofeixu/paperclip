@@ -7,6 +7,14 @@ export {
   patchInstanceExperimentalSettingsSchema,
   type InstanceExperimentalSettings,
   type PatchInstanceExperimentalSettings,
+  instanceNotificationSettingsSchema,
+  patchInstanceNotificationSettingsSchema,
+  notificationChannelSchema,
+  wecomBotChannelSchema,
+  type InstanceNotificationSettings,
+  type PatchInstanceNotificationSettings,
+  type NotificationChannel,
+  type WecomBotChannel,
 } from "./instance.js";
 
 export {
