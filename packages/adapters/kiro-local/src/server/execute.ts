@@ -148,21 +148,6 @@ export async function execute(ctx: AdapterExecutionContext): Promise<AdapterExec
     return asStringArray(config.args);
   })();
 
-  // kiro-cli supports --resume for session continuation
-  const runtimeSessionParams = parseObject(runtime.sessionParams);
-  const runtimeSessionId = asString(runtimeSessionParams.sessionId, runtime.sessionId ?? "");
-  const runtimeSessionCwd = asString(runtimeSessionParams.cwd, "");
-  const canResumeSession =
-    runtimeSessionId.length > 0 &&
-    (runtimeSessionCwd.length === 0 || path.resolve(runtimeSessionCwd) === path.resolve(cwd));
-  const sessionId = canResumeSession ? runtimeSessionId : null;
-  if (runtimeSessionId && !canResumeSession) {
-    await onLog(
-      "stdout",
-      `[paperclip] Kiro session "${runtimeSessionId}" was saved for cwd "${runtimeSessionCwd}" and will not be resumed in "${cwd}".\n`,
-    );
-  }
-
   const instructionsFilePath = asString(config.instructionsFilePath, "").trim();
   const instructionsDir = instructionsFilePath ? `${path.dirname(instructionsFilePath)}/` : "";
   let instructionsPrefix = "";
@@ -201,7 +186,7 @@ export async function execute(ctx: AdapterExecutionContext): Promise<AdapterExec
   };
   const renderedPrompt = renderTemplate(promptTemplate, templateData);
   const renderedBootstrapPrompt =
-    !sessionId && bootstrapPromptTemplate.trim().length > 0
+    bootstrapPromptTemplate.trim().length > 0
       ? renderTemplate(bootstrapPromptTemplate, templateData).trim()
       : "";
   const sessionHandoffNote = asString(context.paperclipSessionHandoffMarkdown, "").trim();
@@ -222,17 +207,16 @@ export async function execute(ctx: AdapterExecutionContext): Promise<AdapterExec
     heartbeatPromptChars: renderedPrompt.length,
   };
 
-  const buildArgs = (resumeSessionId: string | null) => {
+  const buildArgs = () => {
     const args = ["chat", "--no-interactive", "--trust-all-tools"];
-    if (resumeSessionId) args.push("--resume");
     if (model && model !== DEFAULT_KIRO_LOCAL_MODEL) args.push("--model", model);
     if (agentName) args.push("--agent", agentName);
     if (extraArgs.length > 0) args.push(...extraArgs);
     return args;
   };
 
-  const runAttempt = async (resumeSessionId: string | null) => {
-    const args = buildArgs(resumeSessionId);
+  const runAttempt = async () => {
+    const args = buildArgs();
     if (onMeta) {
       await onMeta({
         adapterType: "kiro_local",
@@ -321,6 +305,6 @@ export async function execute(ctx: AdapterExecutionContext): Promise<AdapterExec
     };
   };
 
-  const initial = await runAttempt(sessionId);
+  const initial = await runAttempt();
   return toResult(initial);
 }
